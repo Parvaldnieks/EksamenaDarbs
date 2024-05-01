@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overall expenses</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,12 +14,10 @@
     <h1>Overall expenses!</h1>
 
     @foreach($expenses as $expense)
-        <ul>
-            <li>Name - {{ $expense->name }}</li>
-            <li>Price - {{ $expense->price }}€</li>
-                
+        <div>
+            <p>Name - {{ $expense->name }}<br>Price - {{$expense->price}}€</p>
             <br></br>
-        </ul>
+        </div>
     @endforeach
 
 </body>
