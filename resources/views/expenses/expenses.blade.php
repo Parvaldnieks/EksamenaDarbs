@@ -10,12 +10,15 @@
 
     <a href="/">Back</a>
     <a href="/create-expenses">Create an expense</a>
+    <a href="/totalAmount">Calculate total amount</a>
 
     <h1>Overall expenses!</h1>
 
     @foreach($expenses as $expense)
         <div>
-            <p>Name - {{ $expense->name }}<br>Price - {{$expense->price}}€</p>
+            <a href="/show/{{ $expense->id }}">
+                <p>Name - {{ $expense->name }}<br>Price - {{$expense->price}}€</p>
+            </a>
             <br></br>
         </div>
     @endforeach

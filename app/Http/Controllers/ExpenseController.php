@@ -13,6 +13,12 @@ class ExpenseController extends Controller
         return view("expenses.expenses", ["expenses" => $expenses]);
     }
 
+    public function expensesShow($id) {
+        $expenses = Expense::find($id);
+
+        return view("expenses.show", ["expenses" => $expenses]);
+    }
+
     public function expensesCreate() {
         return view("expenses.create-expenses");
     }
@@ -25,5 +31,11 @@ class ExpenseController extends Controller
         $expenses->save();
 
         return redirect("/expenses");
+    }
+
+    public function expensesTotalAmount() {
+        $totalAmount = Expense::sumAmount();
+        
+        return view("totalAmount", ["totalAmount" => $totalAmount]);
     }
 }

@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Expense extends Model
 {
-    use HasFactory;
+    public static function sumAmount() {
+        return self::sum("price");
+    }
 }
