@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Expense extends Model
 {
-    public static function sumAmount() {
+    public static function expenseSum() {
         return self::sum("price");
     }
 }

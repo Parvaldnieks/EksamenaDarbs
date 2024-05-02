@@ -34,8 +34,8 @@ class ExpenseController extends Controller
     }
 
     public function expensesTotalAmount() {
-        $totalAmount = Expense::sumAmount();
+        $expensesTotal = Expense::expenseSum();
         
-        return view("totalAmount", ["totalAmount" => $totalAmount]);
+        return view("expensesTotal", ["expensesTotal" => $expensesTotal]);
     }
 }

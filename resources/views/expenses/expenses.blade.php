@@ -10,7 +10,7 @@
 
     <a href="/">Back</a>
     <a href="/create-expenses">Create an expense</a>
-    <a href="/totalAmount">Calculate total amount</a>
+    <a href="/expensesTotal">Calculate total expenses</a>
 
     <h1>Overall expenses!</h1>
 

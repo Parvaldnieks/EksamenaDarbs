@@ -25,4 +25,10 @@ class IncomeController extends Controller
 
         return redirect("/income");
     }
+
+    public function incomeTotalAmount() {
+        $incomeTotal = Income::incomeSum();
+        
+        return view("incomeTotal", ["incomeTotal" => $incomeTotal]);
+    }
 }

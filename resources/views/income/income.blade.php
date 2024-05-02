@@ -9,16 +9,16 @@
 <body>
 
     <a href="/">Main</a>
-    <a href="create-income">Create income</a>
+    <a href="/create-income">Create income</a>
+    <a href="/incomeTotal">Calculate total income</a>
 
-    <h1>Overall income</h1>
+    <h1>Overall income!</h1>
 
     @foreach($income as $income)
-        <ul>
-            <li>{{ $income->salary }}</li>
-                
+        <div>
+            <p>{{ $income->salary }}€</p>
             <br></br>
-        </ul>
+    </div>
     @endforeach
 
 </body>
