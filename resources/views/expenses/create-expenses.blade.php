@@ -12,7 +12,7 @@
 
     <h1>Create an expense</h1>
    
-    <form method="POST" action="store">
+    <form method="POST" action="expensesStore">
         @csrf
         
         <label>

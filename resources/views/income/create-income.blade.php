@@ -12,7 +12,7 @@
 
     <h1>Create income</h1>
    
-    <form method="POST" action="store">
+    <form method="POST" action="incomeStore">
         @csrf
         
         <label>

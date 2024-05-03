@@ -17,8 +17,14 @@
     @foreach($income as $income)
         <div>
             <p>{{ $income->salary }}€</p>
+
+                <form action="/incomeDestroy/{{$income->id}}" method="POST">
+                    @csrf
+                    <button type="submit">Delete</button>
+                </form>
+
             <br></br>
-    </div>
+        </div>
     @endforeach
 
 </body>

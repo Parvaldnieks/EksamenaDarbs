@@ -19,6 +19,12 @@
             <a href="/show/{{ $expense->id }}">
                 <p>Name - {{ $expense->name }}<br>Price - {{$expense->price}}€</p>
             </a>
+            
+            <form action="/expensesDestroy/{{$expense->id}}" method="POST">
+                @csrf
+                <button type="submit">Delete</button>
+            </form>
+
             <br></br>
         </div>
     @endforeach

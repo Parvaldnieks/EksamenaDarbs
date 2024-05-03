@@ -31,4 +31,12 @@ class IncomeController extends Controller
         
         return view("incomeTotal", ["incomeTotal" => $incomeTotal]);
     }
+
+    public function incomeDestroy($id)
+    {
+        $income = Income::findOrFail($id);
+        $income->delete();
+
+        return redirect("/income");
+    }
 }
