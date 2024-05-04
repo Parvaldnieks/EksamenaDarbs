@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\ExpenseController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('main');
@@ -21,3 +22,7 @@ Route::get("/create-income", [IncomeController::class, "incomeCreate"]);
 Route::post("/incomeStore", [IncomeController::class, "incomeStore"]);
 Route::get("/incomeTotal", [IncomeController::class, "incomeTotalAmount"]);
 Route::post("/incomeDestroy/{id}", [IncomeController::class, "incomeDestroy"]);
+
+
+Auth::routes();
+Route::get('/home', [HomeController::class, "index"]);

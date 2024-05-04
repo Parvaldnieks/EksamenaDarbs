@@ -8,25 +8,23 @@
 </head>
 <body>
 
-    <a href="/">Back</a>
-    <a href="/create-expenses">Create an expense</a>
-    <a href="/expensesTotal">Calculate total expenses</a>
+    <a href="/" class="link2">Back</a>
+    <a href="/create-expenses" class="link3">Create an expense</a>
+    <a href="/expensesTotal" class="link1">Calculate total expenses</a>
 
-    <h1>Overall expenses!</h1>
+    <h1 class="expenseOverall">Overall expenses!</h1>
 
     @foreach($expenses as $expense)
-        <div>
-            <a href="/show/{{ $expense->id }}">
-                <p>Name - {{ $expense->name }}<br>Price - {{$expense->price}}€</p>
+            <a href="/show/{{ $expense->id }}" class="smallShow">
+                <p class="output">Name - {{ $expense->name }}<br>Price - {{$expense->price}}€</p>
             </a>
-            
+
             <form action="/expensesDestroy/{{$expense->id}}" method="POST">
                 @csrf
-                <button type="submit">Delete</button>
-            </form>
+                <button type="submit" class="deleteButton">Delete</button>
+                </form>
 
             <br></br>
-        </div>
     @endforeach
 
 </body>

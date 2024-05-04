@@ -8,9 +8,9 @@
 </head>
 <body>
 
-    <a href="/income">Back</a>
+    <a href="/income" class="link1">Back</a>
     
-    <h2>Total - {{ $incomeTotal }}€</h2>
+    <h1 class="total">Total - {{ $incomeTotal }}€</h1>
 
 </body>
 </html>

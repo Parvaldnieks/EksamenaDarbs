@@ -8,22 +8,20 @@
 </head>
 <body>
 
-    <a href="/">Main</a>
-    <a href="/create-income">Create income</a>
-    <a href="/incomeTotal">Calculate total income</a>
+    <a href="/" class="link1">Back</a>
+    <a href="/create-income" class="incomeLink3">Create income</a>
+    <a href="/incomeTotal" class="link2">Calculate total income</a>
 
-    <h1>Overall income!</h1>
+    <h1 class="incomeOverall">Overall income!</h1>
 
     @foreach($income as $income)
         <div>
-            <p>{{ $income->salary }}€</p>
+            <p class="output">{{ $income->salary }}€</p>
 
                 <form action="/incomeDestroy/{{$income->id}}" method="POST">
                     @csrf
-                    <button type="submit">Delete</button>
+                    <button type="submit" class="deleteButton">Delete</button>
                 </form>
-
-            <br></br>
         </div>
     @endforeach
 
