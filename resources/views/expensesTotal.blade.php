@@ -10,7 +10,7 @@
 
     <a href="/expenses" class="link2">Back</a>
 
-    <h1 class="total">Total - {{ $expensesTotal }}€</h1>
+    <h1 class="expenseTotal">Total - {{ $expensesTotal }}€</h1>
 
 </body>
 </html>

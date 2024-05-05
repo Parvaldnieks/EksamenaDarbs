@@ -22,7 +22,7 @@
             <form action="/expensesDestroy/{{$expense->id}}" method="POST">
                 @csrf
                 <button type="submit" class="deleteButton">Delete</button>
-                </form>
+            </form>
 
             <br></br>
     @endforeach
