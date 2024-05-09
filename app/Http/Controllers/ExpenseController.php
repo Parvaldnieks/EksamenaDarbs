@@ -39,8 +39,7 @@ class ExpenseController extends Controller
         return view("expensesTotal", ["expensesTotal" => $expensesTotal]);
     }
 
-    public function expensesDestroy($id)
-    {
+    public function expensesDestroy($id) {
         $expenses = Expense::findOrFail($id);
         $expenses->delete();
 
